@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections ?>
+
+<AnchorPane fx:id="mainPage" prefHeight="564.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gameController">
+   <children>
+	  <!-- Select a table information -->
+      <Label fx:id="tableNameLabel" layoutX="12.0" layoutY="14.0" text="Table" />
+      
+      <ComboBox fx:id="tableComboBox" layoutX="12.0" layoutY="41.0" prefHeight="39.0" prefWidth="230.0" value="game">
+      	<items>
+      		<FXCollections fx:factory="observableArrayList">
+        		<String fx:value="game" />
+        		<String fx:value="player_and_game" />
+        		<String fx:value="player" />
+        	</FXCollections>
+      	</items>
+      </ComboBox>
+      
+      <Button fx:id="selectButton" layoutX="309.0" layoutY="41.0" mnemonicParsing="false" onAction="#selectButtonHandler" prefHeight="25.0" prefWidth="86.0" text="Select" />
+      <Button fx:id="displayButton" disable="true" layoutX="311.0" layoutY="93.0" mnemonicParsing="false" onAction="#displayButtonHandler" text="Display" />
+      <Button fx:id="addButton" disable="true" layoutX="12.0" layoutY="93.0" mnemonicParsing="false" onAction="#addButtonHandler" text="Insert" />
+      <Button fx:id="updateButton" disable="true" layoutX="167.0" layoutY="93.0" mnemonicParsing="false" onAction="#updateButtonHandler" text="Update" />
+      
+      
+      <Label fx:id="tableDataLabel" layoutX="15.0" layoutY="138.0" text="Data" />
+      
+      
+      <Label fx:id="tableActionLabel" layoutX="17.0" layoutY="333.0" prefHeight="27.0" prefWidth="382.0" text="" />
+      <Text fx:id="messageText" layoutX="17.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="192.0" />
+      
+      <ScrollPane layoutX="16.0" layoutY="176.0" prefHeight="140.0" prefWidth="382.0">
+         <content>
+            <GridPane fx:id="tableData" prefHeight="99.0" prefWidth="381.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      
+      <ScrollPane fx:id="container2" layoutX="17.0" layoutY="370.0" prefHeight="165.0" prefWidth="382.0">
+         <content>
+            <GridPane fx:id="tableData2" prefHeight="200.0" prefWidth="362.0" vgap="1.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="76.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="157.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      
+      
+   </children>
+</AnchorPane>
